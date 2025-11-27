@@ -135,8 +135,8 @@
         <!-- CONTROLS PANEL (LEFT) -->
         <div class="controls-panel bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 flex flex-col gap-6 overflow-y-auto border border-gray-700">
             
-            <!-- HEADER UPDATED WITH LOGO AND LINK -->
-            <div class="flex items-center gap-4 mb-2">
+            <!-- HEADER (Sin boton de donacion, solo titulo y creditos) -->
+            <div class="flex items-start gap-4 mb-2">
                 <div class="h-14 w-14 rounded-xl overflow-hidden shadow-lg border border-gray-600 bg-gray-800 flex-shrink-0">
                      <img 
                         src="logo.jpg" 
@@ -241,6 +241,21 @@
                     </div>
                 </div>
             </div>
+
+            <!-- SECCIÓN DE DONACIÓN (QR CODE) AGREGADA AL FONDO -->
+            <div class="mt-auto pt-6 border-t border-gray-700 flex flex-col items-center">
+                <p class="text-xs text-gray-400 mb-2 uppercase tracking-wider font-semibold">Support the Project</p>
+                <a href="https://www.paypal.com/qrcodes/p2pqrc/6EN68NHUTM2KQ" target="_blank" rel="noopener noreferrer" class="block w-36 h-36 bg-white p-2 rounded-xl hover:opacity-90 hover:scale-105 transition-all shadow-lg cursor-pointer" title="Scan or Click to Donate">
+                    <img 
+                        src="qrcode.jpg" 
+                        alt="Donate QR Code"
+                        class="w-full h-full object-contain"
+                        onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.paypal.com/qrcodes/p2pqrc/6EN68NHUTM2KQ'"
+                    />
+                </a>
+                <p class="text-[10px] text-gray-500 mt-2 text-center">Scan or click the QR code to donate via PayPal</p>
+            </div>
+
         </div>
 
         <!-- VISUALIZER & PLAYER (RIGHT) -->
